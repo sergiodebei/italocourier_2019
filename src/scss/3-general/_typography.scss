@@ -1,0 +1,66 @@
+// ------------------------------
+// Basic typography style for copy text
+// ------------------------------
+
+
+html {
+	font-size: 62.5%;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+    background-color: $white;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-family: $fontFamily-roboto;
+    line-height: 2.2rem;
+    // font-weight: 300;
+    font-style: normal;
+    font-size: 16px; /* currently ems cause chrome bug misinterpreting rems on body element */
+    text-transform: none;
+    color: $black;
+    @media only screen and (max-width: 515px) {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        font-size: 14px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontFamily-poppins;
+    
+}
+
+h1, h2 { 
+    font-size: 1.8rem; 
+    line-height: 1.8; 
+    letter-spacing: 0; 
+    text-transform: uppercase;
+    color: $blue;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+  
+// ------------------------------
+// Basic styles for links
+// ------------------------------
+
+a {
+    color: $blue;
+    text-decoration: none;
+    @include transition (.3s); 
+    &:hover{
+        text-decoration: none;
+        color: $blue_dark;
+    }
+}
+
+main {
+
+}

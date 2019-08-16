@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Clouds
+   ========================================================================== */
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+.cloud{
+    position: absolute;
+    color: #ccc;
+    // animation: animateCloud 20s linear infinite;
+    -webkit-animation: animateCloud 100s linear infinite;
+    -moz-animation: animateCloud 100s linear infinite;
+    animation: animateCloud 100s linear infinite;
+    opacity: 0.6;
+    &.cloud1{
+        top: 10%;
+        font-size: 6em;
+    }
+    &.cloud2{
+        top: 20%;
+        font-size: 3em;
+        animation-delay: -2;
+        -webkit-animation: animateCloud 60s linear infinite;
+        -moz-animation: animateCloud 60s linear infinite;
+        animation: animateCloud 60s linear infinite;
+        opacity: 0.3;
+    }
+    &.cloud3{
+        top: 25%;
+        font-size: 5em;
+        animation-delay: -1;
+        -webkit-animation: animateCloud 80s linear infinite;
+        -moz-animation: animateCloud 80s linear infinite;
+        animation: animateCloud 80s linear infinite;
+        opacity: 0.8;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .cloud{
+        &.cloud1{
+            font-size: 4em;
+        }
+        &.cloud2{
+            font-size: 2em;
+        }
+        &.cloud3{
+            font-size: 3em;
+        }
+    }
+
+}

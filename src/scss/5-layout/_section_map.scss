@@ -1,0 +1,10 @@
+#map{
+    height: 400px;
+    @include transition(.3s);
+}
+
+@media only screen and (max-width: 800px){
+    #map{
+        height: 200px;
+    }
+}

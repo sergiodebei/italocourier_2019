@@ -1,0 +1,98 @@
+.language-toggle{
+    display: flex;
+    justify-content: flex-end; 
+    flex-direction: column;
+    // align-items: center;
+    text-transform: uppercase; 
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    @include transition (.1s);
+    background-color: $white;
+    li{
+        a{
+            border: 1px solid $grey;
+            display: block;
+            font-size: 12px;
+            padding: 3px 11px;
+            color: $black;
+            @include transition (.1s);
+            // &.not-active {
+            //     pointer-events: none;
+            //     cursor: default;
+            //     color: $black;
+            // }
+            margin-bottom: -1px;
+        }
+        &.active, &:hover, &:focus{
+            & > a{
+                color: $white;
+                background-color: $black;
+                border: 1px solid $black;
+                cursor: pointer;
+            }
+        }
+        &.current-lang{
+            a{
+                color: $white;
+                background-color: $black;
+                border: 1px solid $black;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .language-toggle{
+        li{
+            a{
+                font-size: 15px;
+                padding: 4px 11px;
+            }
+
+        }
+    }
+}
+
+body {
+    &.menu--open { 
+        .language-toggle{
+            right: 4rem;
+            bottom: 4rem;
+            li {
+                a {
+                    border: 1px solid $grey;
+                    background-color: $black;
+                    color: $white;
+                }
+                &.active, &:hover, &:focus{
+                    & > a{
+                        color: $black;
+                        background-color: $white;
+                    }
+                }
+                &.current-lang{
+                    a{
+                        color: $black;
+                        background-color: $white;
+                        // border: 1px solid $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        &.menu--open { 
+            .language-toggle{
+                right: 2rem;
+                bottom: 2rem;
+            }
+        }
+    }
+}
