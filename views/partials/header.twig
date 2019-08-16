@@ -1,0 +1,27 @@
+<header id="header">
+    <div class="magic">
+        <nav>
+            <div class="container">
+                <button class="toggle_menu_wheel">
+                    <a href="{{site.url}}"><img src="{{theme.link}}/assets/img/logo.svg" alt="Italo Express Courier"></a>
+                </button>
+                <a href="{{site.url}}" id="logo"><img src="{{theme.link}}/assets/img/logo.svg" alt="Italo Express Courier"><span>{{site.name}}</span></a>
+                {% include "partials/menu.twig" with {'menu': menu.get_items} %}
+                <button class="toggle_menu">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </nav>
+        <div class="lightning"></div>
+        <div class="stars-wrapper"></div>
+        <span class="cloud cloud1"><i class="fa fa-cloud"></i></span>
+        <span class="cloud cloud2"><i class="fa fa-cloud"></i></span>
+        <span class="cloud cloud3"><i class="fa fa-cloud"></i></span>
+        <img src="{{theme.link}}/assets/img/truck.svg" alt="truck" id="truck">
+        <div class="rain-wrapper"></div>
+    </div>
+</header>

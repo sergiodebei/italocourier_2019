@@ -1,0 +1,21 @@
+<section id="why" style="background-color: {{ home_blocks.background_color }};">
+    <div class="container">
+        <div class="row">
+            <div class="col-m-12">
+                <h1 class="title centered">{{home_blocks.title}}</h1>
+                <div class="page__hero__text centered">{{home_blocks.text}}</div>                
+            </div>
+        </div>
+        <div class="row">
+            {% for item in home_blocks.service %}
+                <div class="col-m-4 thecontent">
+                    <img src="{{ item.image.sizes.medium }}" alt="{{ item.image.alt }}" width="item.image.sizes.medium-width" height="item.image.sizes.medium-height">
+                    <div class="description">
+                        <h1>{{ item.title }}</h1>
+                        <p class="">{{ item.text }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+<section id="who" style="background-color: {{ home_blocks.background_color }};">
+    <div class="container">
+        <div class="row">
+            <div class="col-m-12 withpadding">
+                <h1 class="title centered">{{home_blocks.title}}</h1>
+                <div class="page__hero__text">{{home_blocks.text}}</div>
+                {% if home_blocks.add_button %}
+                    {% if home_blocks.button_link[0].acf_fc_layout == 'internal_link' %}
+                        <a href="{{ home_blocks.button_link[0].il_url }}" class="button">{{ home_blocks.button_text }}</a>
+                        {% elseif home_blocks.button_link[0].acf_fc_layout == 'external_link' %}
+                            <a href="{{ home_blocks.button_link[0].el_url }}" class="button" target="_blank">{{ home_blocks.button_text }}</a>
+                    {% endif %}
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+</section>

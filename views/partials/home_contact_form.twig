@@ -1,0 +1,55 @@
+<section id="contact" style="background-color: {{ home_blocks.background_color }};">
+    <div class="container">
+        <div class="row">
+            <div class="col-m-12">
+                <h1 class="title centered">{{ home_blocks.title }}</h1>
+                <div class="centered">{{ home_blocks.text }}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-m-6 withpadding">
+                <div class="details">
+                    <div class="address">
+                        <p>{{ options.name }}</p>
+                        <p>{{ options.address }}</p>
+                        <p>{{ options.address_city }}</p>
+                    </div>
+                    <ul class="socials">
+                        <li>
+                            <a href="tel:{{ options.phone }}">
+                                <span class="icon"><ion-icon name="phone-portrait"></ion-icon></span>
+                                {{ options.phone }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:{{ options.email }}">
+                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                {{ options.email }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ options.facebook }}" target="_blank">
+                                <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+                                {{ site.name }}
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="filetodownload">
+                        <p>
+                            {% if currentlanguage == 'it' %}{{ options.it.download }}{%else%}{{ options.en.download }}{%endif%}
+                        </p>
+                        <a href="{{theme.link}}/pdf/MODULO-ITALO-EXPRESS.doc" target="_blank" download>
+                            <span class="icon"><ion-icon name="document"></ion-icon></span>
+                            {% if currentlanguage == 'it' %}{{ options.it.form }}{%else%}{{ options.en.form }}{%endif%}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-m-6 withform">
+                {% filter shortcodes %}
+                    [caldera_form id="CF587d2bc4d8dd1"]
+                {% endfilter %}
+            </div>
+        </div>
+    </div>
+</section>
