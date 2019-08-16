@@ -14,44 +14,7 @@ $(document).ready(function() {
     }else{
         $("body").removeClass("night");
     }
-
-    $.simpleWeather({
-        zipcode: '',
-        woeid: '727232',
-        location: '',
-        unit: 'c',
-        async: false,
-        success: function(weather) {
-            var today = parseInt(weather.todayCode, 10);
-            // console.log(weather);
-            // console.log(typeof(weather.todayCode));
-            // console.log(parseInt(weather.todayCode, 10));
-            // console.log(typeof(parseInt(weather.todayCode, 10)));
-            var arr = [5, 6, 10, 11, 12, 30];
-            // console.log(arr.includes(today));
-            var raining = arr.includes(today);
-            // console.log(raining);
-
-            if(raining){
-                // setColor();
-                colorsky = "#4a7994";
-                // console.log(colorsky);
-                $("body").addClass("raining");
-                for (i = 0; i <= 100; i++){
-                    $(".rain-wrapper").append("<div class='rain rain-" + i + "'></div>");
-                }
-                $(".lightning").addClass('flashit');
-            }
-            // initMap();
-        },
-
-        error: function (error) {
-            initMap();
-        }
-
-
-    });
-
+    
     function initMap() {
         var myLatLng = {lat: 52.4127875, lng: 4.7846749};
         var map = new google.maps.Map(document.getElementById('map'), {
