@@ -16,7 +16,9 @@
     background-color: #257cac;
     color: #fff;
     font-size: 24px;
-    .fa{
+    svg{
+        height: 24px;
+        fill: white;
         padding: 0 1px;
     }
     &:hover{
@@ -24,6 +26,10 @@
         box-shadow: 0 2px 0 #ede7b3;
         -webkit-transform: translateY(3px);
         transform: translateY(3px);
+    }
+    &.visible {
+        right: 10px;
+        @include transition(.3s);
     }
 }
 

@@ -27,11 +27,6 @@
   text-transform: lowercase;
 }
 
-.visible {
-    right: 10px;
-    @include transition(.3s);
-}
-
 .centerthecontent{
     display: flex;
     justify-content: center;
