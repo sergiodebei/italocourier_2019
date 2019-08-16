@@ -1,0 +1,21 @@
+# System files
+I.DS_Store
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+/.vscode
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
