@@ -14,6 +14,9 @@ $context['post']        = $post;
 $context['post']->home_blocks = $post->get_field('home_blocks');
 $context['currentlanguage'] = pll_current_language();
 
+//get google map api
+$context['gmapi'] = GMAPI;
+
 $context['body_class']  = 'page-home';
 $context['is_front_page'] = 'true';
 
