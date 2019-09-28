@@ -139,17 +139,19 @@ $(document).ready(function() {
 
 });
 
-$(window).scroll(function(){
-    if($(this).scrollTop() > 200) {
-        $(".auto-scroll-to-top").addClass("visible");
-    } else {
-        $(".auto-scroll-to-top").removeClass("visible");
-    }
-});
 
-$(".auto-scroll-to-top").click(function(){
-    $("html, body").animate({scrollTop: 0}, 600);
-});
+if( document.querySelector(".auto-scroll-to-top") ) {
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 200) {
+            $(".auto-scroll-to-top").addClass("visible");
+        } else {
+            $(".auto-scroll-to-top").removeClass("visible");
+        }
+    });
 
+    $(".auto-scroll-to-top").click(function(){
+        $("html, body").animate({scrollTop: 0}, 600);
+    });
+}
 
 

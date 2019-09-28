@@ -1,0 +1,29 @@
+body.page-404 {
+    main {
+        height: 100vh;
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .button {
+            margin: 3.2rem auto 0;
+        }
+        .content {
+            z-index: 3;
+            &__text {
+                color: $white;
+                font-size: 15rem;
+                line-height: 12rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.night {
+        main {
+            background-color: darken($blue_dark, 10%);
+        }
+    }
+}
