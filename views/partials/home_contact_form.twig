@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-m-12">
                 <h1 class="title centered">{{ home_blocks.title }}</h1>
-                <div class="centered">{{ home_blocks.text }}</div>
+                <div class="contact__text">{{ home_blocks.text }}</div>
             </div>
         </div>
         <div class="row">
@@ -38,9 +38,13 @@
                         <p>
                             {% if currentlanguage == 'it' %}{{ options.it.download }}{%else%}{{ options.en.download }}{%endif%}
                         </p>
-                        <a href="{{theme.link}}/pdf/MODULO-ITALO-EXPRESS.doc" target="_blank" download>
+                        <a href="{{theme.link}}/pdf/modulo-preventivo-ITALO-EXPRESS.docx" target="_blank" download>
                             <span class="icon"><ion-icon name="document"></ion-icon></span>
-                            {% if currentlanguage == 'it' %}{{ options.it.form }}{%else%}{{ options.en.form }}{%endif%}
+                            {% if currentlanguage == 'it' %}{{ options.it.form_doc }}{%else%}{{ options.en.form_doc }}{%endif%}
+                        </a>
+                        <a href="{{theme.link}}/pdf/modulo-preventivo-ITALO-EXPRESS.pdf" target="_blank" download>
+                            <span class="icon"><ion-icon name="document"></ion-icon></span>
+                            {% if currentlanguage == 'it' %}{{ options.it.form_pdf }}{%else%}{{ options.en.form_pdf }}{%endif%}
                         </a>
                     </div>
                 </div>
