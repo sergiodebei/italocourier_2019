@@ -15,24 +15,30 @@
                         <p>{{ options.address_city }}</p>
                     </div>
                     <ul class="socials">
-                        <li>
-                            <a href="tel:{{ options.phone }}">
-                                <span class="icon"><ion-icon name="phone-portrait"></ion-icon></span>
-                                {{ options.phone }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:{{ options.email }}">
-                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                                {{ options.email }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ options.facebook }}" target="_blank">
-                                <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
-                                {{ site.name }}
-                            </a>
-                        </li>
+                      <li>
+                        <a href="https://wa.me/{{ options.whatsapp | replace({'+' : '', ' ' : ''}) }}" target="_blank">
+                          <span class="icon"><ion-icon name="logo-whatsapp"></ion-icon></span>
+                          Scrivici su WhatsApp
+                        </a>
+                      </li>
+                      <li>
+                          <a href="tel:{{ options.phone }}">
+                              <span class="icon"><ion-icon name="phone-portrait"></ion-icon></span>
+                              {{ options.phone }}
+                          </a>
+                      </li>
+                      <li>
+                          <a href="mailto:{{ options.email }}">
+                              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                              {{ options.email }}
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{ options.facebook }}" target="_blank">
+                              <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+                              {{ site.name }}
+                          </a>
+                      </li>
                     </ul>
                     <div class="filetodownload">
                         <p>
